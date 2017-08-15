@@ -15,11 +15,11 @@
 (function(exports) {
   console.log("Test to addNote to list");
   function testAddNoteToListModel() {
+    var note = new Note("testing 123");
     var list = new List();
-    list.addNote('text');
-    console.log(list.notes())
+    list.addNote(note);
 
-    if(list.notes()[0].text !== 'text') {
+    if(list.notes()[0].text !== 'testing 123') {
       throw new Error("no note added");
     }
   }

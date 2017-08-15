@@ -1,10 +1,15 @@
 (function(exports) {
   console.log("test to return a string of HTML that represents the note list model");
   function noteListView() {
+    var note = new Note("is this working?")
     var list = new List();
-    var view = new View(list.addNote("test note"));
+    var testlist = list.addNote(note);
+    var view = new View(testlist);
+    console.log(view._list[0]);
+    console.log(view.listHtml());
 
-    if(view.listHtml() === "<ul><li><div>test note</div></li></ul>") {
+
+    if(view.listHtml() === "<ul><li><div>is this working?</div></li></ul>") {
       console.log("Test passed: html string returned")
     }
     else {

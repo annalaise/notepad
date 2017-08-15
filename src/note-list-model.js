@@ -1,16 +1,18 @@
+"use strict";
+
 (function(exports) {
+  function List() {
+    this._notes = [];
+  }
 
-function List() {
-  this._notes = [];
-}
+  List.prototype.notes = function() {
+    return this._notes;
+  };
 
-List.prototype.notes = function() {
-  return this._notes;
-};
-
-List.prototype.addNote = function(text) {
-  this._notes.push(new Note(text));
-}
+  List.prototype.addNote = function(note) {
+    this._notes.push(note);
+    return this._notes;
+  };
 
 exports.List = List;
 })(this);
