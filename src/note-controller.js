@@ -1,8 +1,10 @@
 (function(exports) {
-    function changeGreeting() {
-    var elem = document.getElementById('app');
-    console.log(elem);
-    elem.innerHTML = "howdy";
+    function noteController() {
+    exports.document.getElementById("app").innerHTML = "howdy";
+    console.log("howdy");
   }
-exports.changeGreeting = changeGreeting;
+exports.noteController = noteController;
 })(this);
+
+document.
+document.getElementById("app").innerHTML = "howdy";
