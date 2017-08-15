@@ -17,6 +17,7 @@
   function testAddNoteToListModel() {
     var list = new List();
     list.addNote('text');
+    console.log(list.notes())
 
     if(list.notes()[0].text !== 'text') {
       throw new Error("no note added");
