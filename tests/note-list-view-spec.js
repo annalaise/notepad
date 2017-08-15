@@ -5,9 +5,6 @@
     var list = new List();
     var testlist = list.addNote(note);
     var view = new View(testlist);
-    console.log(view._list[0]);
-    console.log(view.listHtml());
-
 
     if(view.listHtml() === "<ul><li><div>is this working?</div></li></ul>") {
       console.log("Test passed: html string returned")
