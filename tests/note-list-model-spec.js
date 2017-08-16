@@ -1,6 +1,5 @@
 (function(exports) {
   var description = "test to initiatise a note with list model";
-  console.log("test to initiatise a note with list model");
   function testNoteModelList() {
     var list = new List();
 
@@ -11,13 +10,11 @@
   }
 
    testNoteModelList();
-   console.log("test passes");
 })(this);
 
 (function(exports) {
   var description = "Test to addNote to list";
 
-  console.log("Test to addNote to list");
   function testAddNoteToListModel() {
     var note = new Note("testing 123");
     var list = new List();
@@ -29,5 +26,4 @@
     }
   }
   testAddNoteToListModel();
-  console.log("test passes");
 })(this);

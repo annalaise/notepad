@@ -10,7 +10,6 @@
   }
 
   NoteControllerTest();
-  console.log("NoteControllerTest Passed!");
 })(this);
 
 (function(exports) {
