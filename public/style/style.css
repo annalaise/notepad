@@ -1,0 +1,15 @@
+.left {
+  border-width: 10px;
+  border-color: #CBA0AA;
+  border-style: dashed;
+}
+
+.test-data {
+  border-width: 10px;
+  border-style: dotted;
+  border-color: #9C9CDD;
+}
+
+body {
+  background-color: #D3e8E1;
+}

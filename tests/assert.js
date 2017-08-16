@@ -1,12 +1,12 @@
 var assert = {
   isTrue: function(assertionToCheck, description) {
     if (!assertionToCheck) {
-      document.getElementById("tests").innerHTML += ("🍎 Test: '" + description + "' failed: " + assertionToCheck + " is not truthy<br />");
-      document.getElementById("tests").innerHTML += "<img width='200px' height='150px' src='"+ failImage() + "'><br />";
+      document.getElementById("tests").innerHTML += ("😾 Test: '" + description + "' failed: " + assertionToCheck + " is not truthy<br>");
+      document.getElementById("tests").innerHTML += "<img width='200px' height='150px' src='"+ failImage() + "'><br>";
       document.getElementById("purr").innerHTML = failHiss();
     } else {
-      document.getElementById("tests").innerHTML += ("🍏 Test: '" + description + "' completed successfully!" + "<br />");
-      document.getElementById("tests").innerHTML += "<img width='200px' height='150px' src='"+ successImage() +"'><br />";
+      document.getElementById("tests").innerHTML += ("😸 Test: '" + description + "' completed successfully!" + "<br>");
+      document.getElementById("tests").innerHTML += "<img width='200px' height='150px' src='"+ successImage() +"'><br>";
       document.getElementById("purr").innerHTML = successPurr();
     }
   }
