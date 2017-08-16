@@ -1,10 +1,7 @@
-(function(exports) {
-    function noteController() {
-    exports.document.getElementById("app").innerHTML = "howdy";
-    console.log("howdy");
-  }
-exports.noteController = noteController;
-})(this);
+$(document).ready(function() {
 
-document.
-document.getElementById("app").innerHTML = "howdy";
+  function noteController() {
+    $(document).getElementById("app").innerHTML = ("howdy");
+  };
+
+}
