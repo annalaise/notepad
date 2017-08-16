@@ -16,9 +16,6 @@
     var description = "Single Note View returns a div element containing the single note";
     var note = new Note("CATZ rule. Javascript does not");
     var singleNoteView = new SingleNoteView(note);
-    console.log(singleNoteView);
-    console.log(singleNoteView.display());
-
     assert.isTrue(singleNoteView.display() === "<div>CATZ rule. Javascript does not</div>", description);
   }
 

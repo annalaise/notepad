@@ -10,7 +10,7 @@
     var noteList = [];
 
     this._list.forEach(function(note) {
-      noteList.push(note.text);
+      noteList.push(note.text.substring(0,20));
     });
 
     return "<ul><li><div>" + noteList.join("</div></li><li><div>") + "</div></li></ul>";

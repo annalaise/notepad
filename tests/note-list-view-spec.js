@@ -9,3 +9,16 @@
   }
   noteListView();
 })(this);
+
+(function(exports) {
+  description = "Note list view only shows first 20 characters of a note";
+  function noteListView() {
+    var note = new Note("Cat ipsum dolor sit amet, be a nyan cat, feel great about it, be annoying 24/7 poop rainbows in litter box all day. Get video posted to internet for chasing red dot need to chase tail, chase the pig around the house, cat dog hate mouse eat string barf pillow no baths hate everything so hunt anything that moves.");
+    var list = new List();
+    var testlist = list.addNote(note);
+    var view = new View(testlist);
+    console.log(new View(testlist).listHtml());
+    assert.isTrue(view.listHtml() === "<ul><li><div>Cat ipsum dolor sit </div></li></ul>", description);
+  }
+  noteListView();
+})(this);
