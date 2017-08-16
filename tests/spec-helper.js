@@ -9,7 +9,7 @@ var createNoteList = function() {
 };
 
 var createNoteController = function() {
-  var noteController = new NoteController(createNoteList());
-  console.log(noteController);
-  return noteController;
+  var note = new Note("Javascript SUCKS");
+  var list = new List().addNote(note);
+  return new NoteController(list);
 };

@@ -13,10 +13,8 @@
 
 (function(exports) {
   function NoteControllerHTMLTest() {
-    var testController = createNoteController();
-    testController.display();
-
-    if (document.getElementById('app').innerHTML.includes("Javascript SUCKS") == false) {
+    createNoteController().display();
+    if (document.getElementById('app').innerHTML.includes("Javascript SUCKS") === false) {
       throw new Error("NoteController display not working");
     }
   }
