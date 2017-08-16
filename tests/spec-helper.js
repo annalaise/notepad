@@ -1,10 +1,11 @@
-var createNote = function() {
-  return new Note('Javascript SUCKS');
+var createNote = function(string) {
+  return new Note(string);
 };
+
 
 var createNoteList = function() {
   var list = new List();
-  list.addNote(createNote());
+  list.addNote(createNote("Javascript SUCKS"));
   return list;
 };
 

@@ -9,8 +9,3 @@ document.getElementById('app').innerHTML = 'howdy';
   };
   exports.NoteController = NoteController;
 })(this);
-
-// var note = new Note("I love Javascript");
-// var list = new List().addNote(note);
-// new NoteController(list).display();
-// console.log("Success!!");
