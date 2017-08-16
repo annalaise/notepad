@@ -14,7 +14,7 @@
     });
 
     return "<ul><li><div>" + noteList.join("</div></li><li><div>") + "</div></li></ul>";
-  }
+  };
 
 exports.View = View;
 })(this);
