@@ -3,11 +3,23 @@ var assert = {
     if (!assertionToCheck) {
       document.getElementById("tests").innerHTML += ("🍎 Test: '" + description + "' failed: " + assertionToCheck + " is not truthy<br />");
       document.getElementById("tests").innerHTML += "<img width='200px' height='150px' src='"+ failImage() + "'><br />";
+      document.getElementById("purr").innerHTML = failHiss();
     } else {
       document.getElementById("tests").innerHTML += ("🍏 Test: '" + description + "' completed successfully!" + "<br />");
       document.getElementById("tests").innerHTML += "<img width='200px' height='150px' src='"+ successImage() +"'><br />";
+      document.getElementById("purr").innerHTML = successPurr();
     }
   }
+};
+
+var successPurr = function() {
+  var purrSound = 'public/audio/purr.mp3';
+  return "<audio autoplay loop><source src=" + purrSound + "></audio>";
+};
+
+var failHiss = function() {
+  var purrSound = 'public/audio/cathiss.mp3';
+  return "<audio autoplay loop><source src=" + purrSound + "></audio>";
 };
 
 var successArray = ["http://imworld.aufeminin.com/story/20140423/cat-meme-218141_w650.jpg",
