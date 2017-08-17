@@ -1,29 +1,38 @@
-(function(exports) {
+var beforeEach = function(){
+  this.testList = new List();
+  this.testNote1 = new Note("testing 123");
+  this.testNote2 = new Note("Simples!");
+};
+
+
+(function() {
+  beforeEach();
   var description = "test to initiatise a note with list model";
-  function testNoteModelList() {
-    var list = new List();
-
-    assert.isTrue(list.notes() !== null, description);
-    if (list.notes() === null) {
-      throw new Error("no list");
-    }
+  assert.isTrue(testList.notes() !== null, description);
+  if (testList.notes() === null) {
+    throw new Error("no list");
   }
+})();
 
-   testNoteModelList();
-})(this);
-
-(function(exports) {
+(function() {
+  beforeEach();
   var description = "Test to addNote to list";
-
-  function testAddNoteToListModel() {
-    var note = new Note("testing 123");
-    var list = new List();
-    list.addNote(note);
-
-    assert.isTrue(list.notes()[0].text === 'testing 123', description);
-    if(list.notes()[0].text !== 'testing 123') {
-      throw new Error("no note added");
-    }
+  testList.addNote(testNote1);
+  assert.isTrue(testList.notes()[0].text === testNote1.getText(), description);
+  if(testList.notes()[0].text !== testNote1.getText()) {
+    throw new Error("no note added");
   }
-  testAddNoteToListModel();
-})(this);
+})();
+
+(function(){
+  beforeEach();
+  var description = "Test to add unique id to note";
+  testList.addNote(testNote1);
+  testList.addNote(testNote2);
+  id0 = testList.notes()[0].getId();
+  id1 = testList.notes()[1].getId();
+  assert.isTrue(id0 === 0 && id1 === 1, description);
+  if(!id0 === 0 && !id1 === 1) {
+    throw new Error("Add unique id to note failed");
+  }
+})();

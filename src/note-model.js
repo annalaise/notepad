@@ -3,10 +3,21 @@
 (function(exports) {
   function Note(text) {
     this.text = text;
+    this.id = null;
   }
 
-  Note.prototype.text = function() {
-    return this.text;
+  Note.prototype = {
+    getText: function() {
+      return this.text;
+    },
+
+    getId: function() {
+      return this.id;
+    },
+
+    setId: function(id) {
+      this.id = id;      
+    }
   };
 
 exports.Note = Note;
