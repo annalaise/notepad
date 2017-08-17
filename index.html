@@ -2,21 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <script src="src/note-model.js"></script>
-    <script src="src/note-list-model.js"></script>
-    <script src="src/note-list-view.js"></script>
-    <script src="tests/note-model-spec.js"></script>
-    <script src="tests/note-list-model-spec.js"></script>
-    <script src="tests/note-list-view-spec.js"></script>
-
     <title>Notepad</title>
   </head>
   <body>
 
     <div id="app"><text>Hello</text></div>
+    <div id="singleNoteView">...</div>
 
-    <div id="single-note-view">The note goes here</div>
-
+    <script src="src/note-list-model.js"></script>
+    <script src="src/note-list-view.js"></script>
+    <script src="src/note-model.js"></script>
+    <script src="src/single-note-view.js"></script>
     <script src="src/note-controller.js"></script>
+    <script src="tests/spec-helper.js"></script>
+    <script>
+      var NoteController = createNoteController();
+      NoteController.displayNotesList();
+    </script>
   </body>
 </html>

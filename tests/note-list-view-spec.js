@@ -17,7 +17,6 @@
     var list = new List();
     var testlist = list.addNote(note);
     var view = new View(testlist);
-    console.log(view.listHtml())
     assert.isTrue(view.listHtml() === "<ul><li><div><a href=\"#notes/" + note.getId() + "\">Cat ipsum dolor sit </a></div></li></ul>", description);
   }
   noteListView();

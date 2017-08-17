@@ -13,7 +13,18 @@
     });
     htmlToReturn += "</ul>";
     return htmlToReturn;
-    };
+  };
+
+  View.prototype.singleNoteHtmlForId = function(id) {
+    var htmlToReturn = "<ul><li><div>";
+    this._list.forEach(function(note){
+      if(note.getId() === id) {
+        htmlToReturn += note.getText();
+      };
+    });
+    htmlToReturn += "</div></li></ul>";
+    return htmlToReturn;
+  };
 
   exports.View = View;
 })(this);
