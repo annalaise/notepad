@@ -7,14 +7,13 @@
   }
 
   View.prototype.listHtml = function() {
-    var noteList = [];
-
+    var htmlToReturn = "<ul>";
     this._list.forEach(function(note) {
-      noteList.push(note.text.substring(0,20));
+      htmlToReturn += ("<li><div><a href=\"#notes/" + note.getId() + "\">" + note.getText().substring(0,20) + "</a></div></li>");
     });
+    htmlToReturn += "</ul>";
+    return htmlToReturn;
+    };
 
-    return "<ul><li><div>" + noteList.join("</div></li><li><div>") + "</div></li></ul>";
-  };
-
-exports.View = View;
+  exports.View = View;
 })(this);

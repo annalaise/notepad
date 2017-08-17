@@ -5,7 +5,7 @@
     var list = new List();
     var testlist = list.addNote(note);
     var view = new View(testlist);
-    assert.isTrue(view.listHtml() === "<ul><li><div>is this working?</div></li></ul>", description);
+    assert.isTrue(view.listHtml() === "<ul><li><div><a href=\"#notes/" + note.getId() + "\">is this working?</a></div></li></ul>", description);
   }
   noteListView();
 })(this);
@@ -17,7 +17,8 @@
     var list = new List();
     var testlist = list.addNote(note);
     var view = new View(testlist);
-    assert.isTrue(view.listHtml() === "<ul><li><div>Cat ipsum dolor sit </div></li></ul>", description);
+    console.log(view.listHtml())
+    assert.isTrue(view.listHtml() === "<ul><li><div><a href=\"#notes/" + note.getId() + "\">Cat ipsum dolor sit </a></div></li></ul>", description);
   }
   noteListView();
 })(this);
